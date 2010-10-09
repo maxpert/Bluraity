@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>maxpert/Bluraity @ GitHub</title>
+	
+	<style type="text/css">
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+			margin:0;
+			padding:0;
+		}
+		table {
+			border-collapse:collapse;
+			border-spacing:0;
+		}
+		fieldset,img { 
+			border:0;
+		}
+		address,caption,cite,code,dfn,em,strong,th,var {
+			font-style:normal;
+			font-weight:normal;
+		}
+		ol,ul {
+			list-style:none;
+		}
+		caption,th {
+			text-align:left;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			font-size:100%;
+			font-weight:normal;
+		}
+		q:before,q:after {
+			content:'';
+		}
+		abbr,acronym { border:0;}
+
+		body {
+			padding: 15px;
+			background-color: #ddd;
+			font-family: "Helvetica, Arial, FreeSans";
+			color: #000000;
+		}
+	</style>
+</head>
+
+<body>
+
+<div id="blurable"><p>An cum decore soleat voluptaria, pro ei solum eruditi, facilis nominavi patrioque ex eum. Ius exerci homero aperiri ea. Mel aeterno patrioque eu, dicit scaevola mea an. Ad vel nulla scriptorem? Ea cum legimus inciderint, paulo blandit abhorreant sit an?
+    </p>
+    <img src="http://cdn.iconfinder.net/data/icons/Futurosoft%20Icons%200.5.2/128x128/apps/designer.png" alt="" style="float: right;"/>
+    <p>
+        Quis utinam percipitur in his, vide alterum ea duo, mucius takimata praesent mel ut? Mea ad dolore vulputate. Et usu commodo corrumpit, an pri nostro inimicus reformidans. Quo ad partem volutpat, pro an duis causae, has nonumy efficiendi reprehendunt cu.
+    </p>
+    <p>
+        Cu omnes commodo consulatu mei, tation suavitate te sed, ea nam consul timeam? Ut his eros voluptatum mediocritatem, vix cu nonumy suscipit expetenda? Summo mollis fabulas ex mel! Mei ea volumus efficiendi, tota brute mei eu, nec atomorum persequeris ex. Te diam elit inani sea, ex verear bonorum efficiendi usu, mei at dolore graeci iisque?
+    </p>
+    <p>
+        Ea eam ubique dicunt probatus, ut noluisse aliquando pro. Eu has utroque suscipiantur, vix ad simul quidam delicatissimi. Mei doming aperiam discere ea, ex euismod dolores has! Ei has suas quot falli.
+    </p>
+</div>
+<div>
+    <p>
+        Nam tota habemus ut, integre patrioque id mel. Ius corpora definitiones eu, duo ad magna mentitum. Duo putant alterum deterruisset in? At eirmod constituto eam, ut nec omnis sanctus molestie. Nobis aliquando incorrupte eum et, eu suscipit similique eam, iisque debitis inimicus vel in?
+    </p>
+    <p>
+        Te ius tollit blandit conclusionemque, ne duo regione adipiscing vituperata! Id eum enim nemore adversarium, eam an munere assentior. Per at amet primis vituperata, te vis graece fierent suscipit. No nec harum omittantur. Eam nulla lobortis constituto ne, ad vel veniam pericula?
+    </p>
+    <p>
+        Nec no tritani epicurei. Prima iuvaret his te. Nam ea postea debitis, impedit principes concludaturque sit ea. Accusam electram periculis ei eam, harum dissentiunt no nam. Pro in fugit elitr suscipiantur?
+    </p>
+    <p>
+        Ne vix etiam dolorum propriae, eu quem qualisque nec? Id vel verear eruditi nonummy, an soluta semper periculis mel! Quo in quando vidisse inciderint, aliquid pertinacia delicatissimi ei mel. No vix assum primis veritus, mel malorum accusata euripidis et, eu sed possit labitur virtute?
+    </p>
+    <p>
+        Et quo eirmod adversarium, te eum deleniti petentium iracundia, ea sit probo equidem utroque. Quodsi epicuri sed no? Ipsum virtute mei ad, mollis deterruisset reprehendunt pri id, quem esse postea vel ea. Ut usu eius menandri conceptam, sed ad puto legimus? Has ne dico contentiones, ea sed zzril placerat? Vis simul pertinacia et.
+    </p>
+    <p>
+        Te quo fabulas delicatissimi, euismod patrioque pro te. Est malis apeirian cu. Ad quas euismod moderatius his, cum in dicta adipisci? In noster minimum invenire has. Per novum recteque electram te, an diam disputando vix?
+    </p>
+</div>
+
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/mootools/1.2.5/mootools-yui-compressed.js'></script>
+<script type='text/javascript' src='src/Bluraity.js'></script>
+<script type='text/javascript' src='adapters/Bluraity.mootools.js'></script>
+<script type='text/javascript'>
+	window.addEvent('domready', function(){
+			var blr = new Bluraity($('blurable'), {offset: 10});
+			$('blurable').addEvent('mouseenter', function(){
+					blr.unblur();
+			});
+			$('blurable').addEvent('mouseleave', function(){
+					blr.blur();
+			});
+			blr.blur();
+		});
+</script>
+  
+</body>
+</html>
