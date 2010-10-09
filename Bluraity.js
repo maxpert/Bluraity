@@ -58,6 +58,7 @@ var Bluraity = (function(){
 			amnt = amount * 8,
 			pos = BlurCom.coords(elm),
 			radius = offset || 7;
+			
 		
 		for (var i = 0; i < amnt; i++) {
 			clones[i] = BlurCom.duplicate(elm, true);
@@ -77,7 +78,7 @@ var Bluraity = (function(){
 	
 	var Bluraity = function(targ, options){
 		this.target = targ;
-		this.conf = BlurCom.ext(options, {amount: 1, offset: 6, duration: 1000, interval: 20});
+		this.conf = BlurCom.ext({amount: 1, offset: 6, duration: 1000, interval: 20}, options);
 		
 	};
 
