@@ -7,6 +7,7 @@
 
 	<title>maxpert/Bluraity @ GitHub</title>
 	
+	<link href='http://fonts.googleapis.com/css?family=Cuprum&subset=latin' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
 			margin:0;
@@ -38,49 +39,138 @@
 		}
 		abbr,acronym { border:0;}
 
-		body {
-			padding: 15px;
-			background-color: #ddd;
-			font-family: "Helvetica, Arial, FreeSans";
-			color: #000000;
+		body{
+			background-color: #C1FF4D;
+			color: #4A0019;
+			font-family: verdana, arial, serif;
+			font-size: 1em;
+		}
+		
+		div#bodyArea{
+			margin: 10px;
+		}
+		
+		h1{
+			font-family: 'Cuprum', arial, serif; 
+			font-size: 5em;
+			height: 1em;
+			text-align: right;
+		}
+		
+		h2{
+			font-family: 'Cuprum', arial, serif; 
+			font-size: 3em;
+			text-align: right;
+		}
+		
+		h3{
+			margin: 10px 0;
+			font-family: 'Cuprum', arial, serif; 
+			font-size: 2em;
+			height: 0.5em;
+		}
+		
+		.colored{
+			background: #4A0019;
+			color: #fff;
+		}
+		
+		.cleared{
+			clear: both;
+		}
+		
+		.margin-5{
+			margin: 5px;
+		}
+		
+		.padding-5{
+			padding: 5px;
+		}
+		
+		.button{
+			float: left;
+			margin: 3px;
+			padding: 5px 10px;
+			border: 1px solid #F4FF62;
+			font-size: 1.5em;
+			font-weight: normal;
+			height: 30px;
+			cursor: pointer;
+			background-color: #FBFFB3;
+			text-align: center;
 		}
 	</style>
 </head>
 
 <body>
 
-<div id="blurable"><p>An cum decore soleat voluptaria, pro ei solum eruditi, facilis nominavi patrioque ex eum. Ius exerci homero aperiri ea. Mel aeterno patrioque eu, dicit scaevola mea an. Ad vel nulla scriptorem? Ea cum legimus inciderint, paulo blandit abhorreant sit an?
-    </p>
-    <img src="http://cdn.iconfinder.net/data/icons/Futurosoft%20Icons%200.5.2/128x128/apps/designer.png" alt="" style="float: right;"/>
-    <p>
-        Quis utinam percipitur in his, vide alterum ea duo, mucius takimata praesent mel ut? Mea ad dolore vulputate. Et usu commodo corrumpit, an pri nostro inimicus reformidans. Quo ad partem volutpat, pro an duis causae, has nonumy efficiendi reprehendunt cu.
-    </p>
-    <p>
-        Cu omnes commodo consulatu mei, tation suavitate te sed, ea nam consul timeam? Ut his eros voluptatum mediocritatem, vix cu nonumy suscipit expetenda? Summo mollis fabulas ex mel! Mei ea volumus efficiendi, tota brute mei eu, nec atomorum persequeris ex. Te diam elit inani sea, ex verear bonorum efficiendi usu, mei at dolore graeci iisque?
-    </p>
-    <p>
-        Ea eam ubique dicunt probatus, ut noluisse aliquando pro. Eu has utroque suscipiantur, vix ad simul quidam delicatissimi. Mei doming aperiam discere ea, ex euismod dolores has! Ei has suas quot falli.
-    </p>
+<div id="bodyArea">
+	<h1>Bluraity</h1>
+	<p style="text-align: right;">The HTML blur!</p>
+	<p id="tip" class="padding-5" style="position: absolute; top: 60px; left: 35%; background: #FBFFB3;"> Can't Read? Try hovering cursor over contents!</p>
+	<div id="blurable">
+		<p class="padding-5">
+		Gives you ability to emulate blur effect using HTML.
+		It uses one of the classic techniques that I used in days of Flash 5 to create blur effect.
+		By replicating the element around the target element and giving them different <strong>opacitites</strong> on each.
+		So lets fill a paragraph area with random text:</p>
+		<p class="colored cleared margin-5 padding-5">
+			Sodales dignissim, est bibendum cum etiam sapien non arcu. Ut vitae, eros suspendisse donec cubilia interdum vestibulum, quis mauris viverra, taciti lobortis sit. Eget ut urna est nibh lacus, nunc est cras. Pulvinar sapien, sem pulvinar sed, elit cras. Et aperiam, sed magna amet nunc enim turpis, cras nec, velit elit, rhoncus iure platea congue ut magna. Nec rutrum pede quis donec wisi amet, nam dictum culpa vel lectus ac. Erat amet erat sit pellentesque ante ea, quam donec nunc quia, nec lectus vitae magna vestibulum condimentum, quam donec. Erat penatibus velit nunc sit nullam adipiscing, laoreet ut laoreet posuere. Arcu pellentesque id ligula, varius justo eget semper, morbi porta turpis, ultrices suscipit felis praesent lectus fringilla ultricies, amet nulla non rutrum erat.
+		</p>
+		
+	</div>
+	
+	<div style="margin: 20px"> </div>
+	
+	<div id="buttonContainer" class="margin-5">
+		<div>
+			<h2 style="float: right;">Manually blurred area</h2>
+			<div style="overflow: auto;">
+				<div class="button" id="blurButton"> Blur </div>
+				<div class="button" id="unblurButton"> Unblur </div>
+			</div>
+			<div id="info" class="colored padding-5">Click Blur to blur out!</div>
+		</div>
+	</div>
+	<div class="padding-5"></div>
+	<div id="manualBlurred">
+		Your blured area can contain almost every html element even input forms can work, with background images. Have a look:
+		
+		<h3>Links</h3>
+		<br/>
+		<a href="http://maxpert.net.tc/">My homepage link</a>
+		<br/>
+		<h3>Images</h3>
+		<br/>
+		<img src="http://images.starpulse.com/Photos/Previews/Linkin-Park-w15.jpg" height="200px" width="250px" alt="" />
+		<img src="http://images.kaneva.com/filestore0/553191/973671/LINKIN%20PARK%20SYMBOL_ad.jpg" height="200px" width="250px" alt=""/>
+		<h3>Tables</h3>
+		<br/>
+		<table border="1" width="100%">
+		<tr>
+		<td>row 1, cell 1</td>
+		<td>row 1, cell 2</td>
+		</tr>
+		<tr>
+		<td>row 2, cell 1</td>
+		<td>row 2, cell 2</td>
+		</tr>
+		</table>
+		
+		
+		<h3>Freaking inputs!</h3>
+		<br/>
+		<form>
+			First name: <input type="text" name="firstname" /><br />
+			Last name: <input type="text" name="lastname" /> <br/>
+			<input type="radio" name="sex" value="male" /> Male <input type="radio" name="sex" value="female" /> Female
+			<button>Rock it!</button>
+		</form>
+	</div>
 </div>
-<div>
-    <p>
-        Nam tota habemus ut, integre patrioque id mel. Ius corpora definitiones eu, duo ad magna mentitum. Duo putant alterum deterruisset in? At eirmod constituto eam, ut nec omnis sanctus molestie. Nobis aliquando incorrupte eum et, eu suscipit similique eam, iisque debitis inimicus vel in?
-    </p>
-    <p>
-        Te ius tollit blandit conclusionemque, ne duo regione adipiscing vituperata! Id eum enim nemore adversarium, eam an munere assentior. Per at amet primis vituperata, te vis graece fierent suscipit. No nec harum omittantur. Eam nulla lobortis constituto ne, ad vel veniam pericula?
-    </p>
-    <p>
-        Nec no tritani epicurei. Prima iuvaret his te. Nam ea postea debitis, impedit principes concludaturque sit ea. Accusam electram periculis ei eam, harum dissentiunt no nam. Pro in fugit elitr suscipiantur?
-    </p>
-    <p>
-        Ne vix etiam dolorum propriae, eu quem qualisque nec? Id vel verear eruditi nonummy, an soluta semper periculis mel! Quo in quando vidisse inciderint, aliquid pertinacia delicatissimi ei mel. No vix assum primis veritus, mel malorum accusata euripidis et, eu sed possit labitur virtute?
-    </p>
-    <p>
-        Et quo eirmod adversarium, te eum deleniti petentium iracundia, ea sit probo equidem utroque. Quodsi epicuri sed no? Ipsum virtute mei ad, mollis deterruisset reprehendunt pri id, quem esse postea vel ea. Ut usu eius menandri conceptam, sed ad puto legimus? Has ne dico contentiones, ea sed zzril placerat? Vis simul pertinacia et.
-    </p>
-    <p>
-        Te quo fabulas delicatissimi, euismod patrioque pro te. Est malis apeirian cu. Ad quas euismod moderatius his, cum in dicta adipisci? In noster minimum invenire has. Per novum recteque electram te, an diam disputando vix?
-    </p>
+
+<div style="padding: 10px; text-align: center;" class="colored">
+	The MIT License Copyright (c) 2010 Zohaib Sibt-e-Hassan(MaXPert)
 </div>
 
 
@@ -88,14 +178,37 @@
 <script type='text/javascript' src='Bluraity.js'></script>
 <script type='text/javascript' src='Bluraity.mootools.js'></script>
 <script type='text/javascript'>
+
+
 	window.addEvent('domready', function(){
-			var blr = new Bluraity($('blurable'), {offset: 10});
+			var blr = new Bluraity($('blurable'), {duration: 500, offset: 15});
+			var manB = new Bluraity($('manualBlurred'), {
+				offset: 20,
+				blurred: function(){
+					$('info').set('html', 'Yayyy! now try unbluring!');
+				},
+				unblurred: function(){
+					$('info').set('html', 'Wooot! blur baby blur!');
+				}
+				});
+			
 			$('blurable').addEvent('mouseenter', function(){
+					$('tip').fade(0);
 					blr.unblur();
 			});
 			$('blurable').addEvent('mouseleave', function(){
 					blr.blur();
+					$('tip').fade(1);
 			});
+			
+			$('blurButton').addEvent('click', function(){
+					manB.blur();
+			});
+			
+			$('unblurButton').addEvent('click', function(){
+					manB.unblur();
+			});
+			
 			blr.blur();
 		});
 </script>
