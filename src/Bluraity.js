@@ -1,3 +1,27 @@
+/*
+The MIT License
+
+Copyright (c) 2010 Zohaib Sibt-e-Hassan(MaXPert)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
 var Bluraity = (function(){
 	
 	//Positions of onion layers on top of parent
@@ -58,6 +82,7 @@ var Bluraity = (function(){
 			amnt = amount * 8,
 			pos = BlurCom.coords(elm),
 			radius = offset || 7;
+			
 		
 		for (var i = 0; i < amnt; i++) {
 			clones[i] = BlurCom.duplicate(elm, true);
@@ -77,7 +102,7 @@ var Bluraity = (function(){
 	
 	var Bluraity = function(targ, options){
 		this.target = targ;
-		this.conf = BlurCom.ext(options, {amount: 1, offset: 6, duration: 1000, interval: 20});
+		this.conf = BlurCom.ext({amount: 1, offset: 6, duration: 1000, interval: 20}, options);
 		
 	};
 
@@ -94,7 +119,7 @@ var Bluraity = (function(){
 					this.conf.duration, 
 					{
 						timeout: this.conf.interval,
-						complete: this.conf.outComplete
+						complete: this.conf.blurred
 					});
 			this.oldOpacity = BlurCom.getStyle(this.target, 'opacity');
 			
@@ -126,7 +151,7 @@ var Bluraity = (function(){
 							for(var i=0; i<me.clones.length; i++){
 								BlurCom.destroy(me.clones[i]);
 							}
-							me.conf.inComplete && me.conf.inComplete();
+							me.conf.unblurred && me.conf.unblurred();
 							
 							delete me.clones;
 						}
