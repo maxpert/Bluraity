@@ -202,38 +202,38 @@
 </div>
 
 
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/mootools/1.2.5/mootools-yui-compressed.js'></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
 <script type='text/javascript' src='Bluraity.js'></script>
-<script type='text/javascript' src='Bluraity.mootools.js'></script>
+<script type='text/javascript' src='Bluraity.jquery.js'></script>
 <script type='text/javascript'>
 
 
-	window.addEvent('domready', function(){
-			var blr = new Bluraity($('blurable'), {duration: 500, offset: 15});
-			var manB = new Bluraity($('manualBlurred'), {
+	$(function(){
+			var blr = new Bluraity($('#blurable')[0], {duration: 500, offset: 15});
+			var manB = new Bluraity($('#manualBlurred')[0], {
 				offset: 20,
 				blurred: function(){
-					$('info').set('html', 'Yayyy! now try unbluring!');
+					$('#info').html('Yayyy! now try unbluring!');
 				},
 				unblurred: function(){
-					$('info').set('html', 'Wooot! blur baby blur!');
+					$('#info').html('Wooot! blur baby blur!');
 				}
-				});
+			});
 			
-			$('blurable').addEvent('mouseenter', function(){
-					$('tip').fade(0);
+			$('#blurable').bind('mouseenter', function(){
+					$('#tip').fadeOut();
 					blr.unblur();
 			});
-			$('blurable').addEvent('mouseleave', function(){
+			$('#blurable').bind('mouseleave', function(){
 					blr.blur();
-					$('tip').fade(1);
+					$('#tip').fadeIn();
 			});
 			
-			$('blurButton').addEvent('click', function(){
+			$('#blurButton').bind('click', function(){
 					manB.blur();
 			});
 			
-			$('unblurButton').addEvent('click', function(){
+			$('#unblurButton').bind('click', function(){
 					manB.unblur();
 			});
 			
